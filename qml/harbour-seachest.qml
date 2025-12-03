@@ -104,7 +104,7 @@ ApplicationWindow {
                         uploadLargeItemSize = fileSize;
                         uploadOffsetValue = 0;
                         activeUlLarge = true;
-                        uploadModel.set(0, {"currentUlItem": mainAppWindow.selectedFileName, "currentUlItemPath": mainAppWindow.selectedLocalFile, "currentFolderPath": uploadToHere, "uploadProgress": 0.0, "uploadProgressPct": "0%", "currentUlItemLarge": "[1/" + totalSegments + "] " + mainAppWindow.selectedFileName});
+                        uploadModel.set(0, {"currentUlItem": mainAppWindow.selectedFileName, "currentUlItemPath": mainAppWindow.selectedLocalFile, "currentFolderPath": uploadToHere, "uploadProgress": 0.0, "uploadProgressPct": "0%", "currentUlItemLarge": "[1/" + uploadTotalSegments + "] " + mainAppWindow.selectedFileName});
                         mainUpload.largeUpload("https://content.dropboxapi.com/2/files/upload_session/start", mainAppWindow.selectedLocalFile, "{\"close\":false}", "UPLOAD_START", 0, "Bearer " + settings.accessKey);
 
                     }
